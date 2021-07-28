@@ -125,13 +125,13 @@ public class TribalModePlugin extends Plugin
 	@Subscribe
 	private void onConfigChanged(ConfigChanged event)
 	{
-		if (event.getGroup().equals("BEKChallengeOne"))
+		if (event.getGroup().equals("tribalmode"))
 		{
 			switch(event.getKey()) {
 				case "tribeMembers":
 					populateTribeMembers();
 					break;
-				case "HidePlayers":
+				case "hidePlayers":
 					if (config.hidePlayers())
 						hideEntities();
 					else
